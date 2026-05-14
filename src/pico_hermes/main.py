@@ -16,11 +16,8 @@ def load_context_files(cwd: Path) -> str:
     for name in ["PICO_HERMES.md", "AGENTS.md", "CLAUDE.md", ".cursorrules"]:
         p = cwd / name
         if p.exists() and p.is_file():
-            parts.append(f"# {name}
-" + p.read_text(encoding="utf-8", errors="ignore"))
-    return "
-
-".join(parts)
+            parts.append(f"# {name}\n" + p.read_text(encoding="utf-8", errors="ignore"))
+    return "\n\n".join(parts)
 
 
 def build_system_prompt() -> str:
@@ -40,10 +37,7 @@ def run_agent(prompt: str, model: str, base_url: str, api_key: str, toolset: str
 
     system = build_system_prompt()
     if context:
-        system = system + "
-
-" + "Project context:
-" + context
+        system = system + "\n\n" + "Project context:\n" + context
 
     client = OpenAI(api_key=api_key, base_url=base_url)
 

@@ -55,11 +55,9 @@ def main():
                 os.system("clear" if os.name != "nt" else "cls")
                 continue
 
-            print("
----")
+            print("\n---")
             out = run_agent(prompt, model, base_url, api_key, toolset)
             print(out)
-            print("---
-")
+            print("---\n")
     finally:
         _save_history()
