@@ -1,0 +1,27 @@
+
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pico-hermes"
+version = "0.1.0"
+description = "Compact tool-calling agent framework inspired by Hermes Agent."
+readme = "README.md"
+requires-python = ">=3.11"
+license = {text = "MIT"}
+authors = [{name = "pico-hermes contributors"}]
+dependencies = [
+  "openai>=1.0.0",
+  "requests>=2.31.0",
+]
+
+[project.scripts]
+pico-hermes = "pico_hermes.main:main"
+pico-hermes-tui = "pico_hermes.tui:main"
+
+[tool.setuptools]
+package-dir = {"" = "src"}
+
+[tool.setuptools.packages.find]
+where = ["src"]

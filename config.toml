@@ -1,0 +1,6 @@
+
+# pico-hermes default config
+model = "gpt-4.1-mini"
+base_url = "https://api.openai.com/v1"
+toolset = "basic"
+allow_shell = false
