@@ -1,4 +1,3 @@
-
 # pico-hermes
 
 A compact, minimal, OpenAI-compatible agent framework inspired by Hermes Agent, designed to be tiny and hackable.
@@ -7,7 +6,6 @@ A compact, minimal, OpenAI-compatible agent framework inspired by Hermes Agent, 
 - **Small & fast**: minimal dependencies, short startup, low memory.
 - **Core agent loop**: tool calling + prompt assembly + context files.
 - **Composable tools**: a tiny registry + toolsets.
-- **LLM Wiki**: persistent, incremental knowledge base (see `wiki/`).
 
 ## Quickstart
 
@@ -39,7 +37,7 @@ toolset = "basic"
 allow_shell = false
 ```
 
-## Tools (pico-claw philosophy: tiny + essential)
+## Tools (pico‑claw philosophy: tiny + essential)
 - **File**: read_file, write_file, search_files, list_dir
 - **Net**: http_get, http_post_json, rss_fetch, html_to_text
 - **Utility**: json_query, sha256
@@ -59,12 +57,6 @@ allow_shell = false
 │       ├── terminal_tool.py  # optional shell
 │       ├── http_tool.py      # http + rss
 │       └── misc_tools.py     # json, hash, html
-├── wiki/                      # LLM Wiki (compiled knowledge)
-├── raw/                       # raw sources (immutable)
 ├── config.toml
-├── requirements.txt
-└── requirements-dev.txt
+└── requirements.txt
 ```
-
-## LLM Wiki
-See `wiki/schema.md` for how to ingest sources and keep the wiki updated.
