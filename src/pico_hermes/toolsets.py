@@ -9,4 +9,6 @@ TOOLSETS = {
 
 
 def resolve_toolset(name: str):
+    if name == "none":
+        return []
     return TOOLSETS.get(name, TOOLSETS["basic"])

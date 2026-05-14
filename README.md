@@ -25,7 +25,7 @@ pico-hermes-tui
 ### Environment
 - `OPENAI_API_KEY` (required)
 - `PICO_HERMES_BASE_URL` (optional, default: https://api.openai.com/v1)
-- `PICO_HERMES_TOOLSET` (optional: basic | net | terminal)
+- `PICO_HERMES_TOOLSET` (optional: basic | net | terminal | none)
 - `PICO_HERMES_ALLOW_SHELL=1` to enable the `terminal` tool
 
 ### Config file
